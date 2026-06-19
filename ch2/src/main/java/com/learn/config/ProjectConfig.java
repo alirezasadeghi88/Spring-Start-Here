@@ -2,29 +2,11 @@ package com.learn.config;
 
 import com.learn.model.Parrot;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
+@ComponentScan(basePackages = "com.learn.model")
 public class ProjectConfig {
 
-    @Bean
-    Parrot parrot1() {
-        var p = new Parrot();
-        p.setName("KOKO");
-        return p;
-    }
-
-    @Bean
-    Parrot parrot2() {
-        var p = new Parrot();
-        p.setName("MIKI");
-        return p;
-    }
-
-    @Bean
-    Parrot parrot3() {
-        var p = new Parrot();
-        p.setName("RIKI");
-        return p;
-    }
 }
