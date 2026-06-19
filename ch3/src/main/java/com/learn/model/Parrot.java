@@ -1,11 +1,12 @@
 package com.learn.model;
 
-public class Parrot {
-    private String name;
+import org.springframework.stereotype.Component;
 
-    public Parrot() {
-        System.out.println("Parrot created");
-    }
+@Component
+public class Parrot {
+    private String name = "KOKO";
+
+
 
     public String getName() {
         return name;
