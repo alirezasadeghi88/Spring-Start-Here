@@ -8,19 +8,23 @@ import org.springframework.context.annotation.Configuration;
 public class ProjectConfig {
 
     @Bean
-    Parrot parrot() {
+    Parrot parrot1() {
         var p = new Parrot();
         p.setName("KOKO");
         return p;
     }
 
     @Bean
-    String hello() {
-        return "HELLO";
+    Parrot parrot2() {
+        var p = new Parrot();
+        p.setName("MIKI");
+        return p;
     }
 
     @Bean
-    Integer ten() {
-        return 10;
+    Parrot parrot3() {
+        var p = new Parrot();
+        p.setName("RIKI");
+        return p;
     }
 }
