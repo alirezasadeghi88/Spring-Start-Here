@@ -10,7 +10,17 @@ public class ProjectConfig {
     @Bean
     Parrot parrot() {
         var p = new Parrot();
-        p.setName("koko");
+        p.setName("KOKO");
         return p;
+    }
+
+    @Bean
+    String hello() {
+        return "HELLO";
+    }
+
+    @Bean
+    Integer ten() {
+        return 10;
     }
 }
