@@ -10,7 +10,7 @@ public class Person {
     private Parrot parrot;
 
     @Autowired
-    public Person(Parrot parrot) {
+    public Person() {
         this.parrot = parrot;
     }
 
