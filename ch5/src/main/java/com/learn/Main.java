@@ -10,5 +10,6 @@ public class Main {
                 new AnnotationConfigApplicationContext(ProjectConfig.class);
 
         var cs1 = c.getBean("commentService", CommentService.class);
+        var cs2 = c.getBean("commentService", CommentService.class);
     }
 }
