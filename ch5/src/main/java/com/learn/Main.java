@@ -11,5 +11,8 @@ public class Main {
         var c =
                 new AnnotationConfigApplicationContext(ProjectConfig.class);
 
+
+        var service = c.getBean(CommentService.class);
+        System.out.println("After retrieving the CommentService");
     }
 }
