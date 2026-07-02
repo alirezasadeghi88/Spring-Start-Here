@@ -1,9 +1,7 @@
-package com.learn;
+package com.learn.singleton;
 
-import com.learn.config.ProjectConfig;
-import com.learn.repository.CommentRepository;
-import com.learn.service.CommentService;
-import com.learn.service.UserService;
+import com.learn.singleton.config.ProjectConfig;
+import com.learn.singleton.service.CommentService;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 public class Main {
