@@ -1,6 +1,6 @@
-package com.learn.service;
+package com.learn.singleton.service;
 
-import com.learn.repository.CommentRepository;
+import com.learn.singleton.repository.CommentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
