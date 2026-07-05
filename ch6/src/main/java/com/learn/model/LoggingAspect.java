@@ -12,6 +12,7 @@ public class LoggingAspect {
 
     @Around("execution(* com.learn.service.*.*(..))")
     public void log(ProceedingJoinPoint joinPoint) throws Throwable {
+        logger.info("Method will execute");
         joinPoint.proceed();
     }
 }
