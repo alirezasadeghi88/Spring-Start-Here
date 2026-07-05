@@ -11,9 +11,7 @@ public class LoggingAspect {
     private Logger logger = Logger.getLogger(LoggingAspect.class.getName());
 
     @Around("execution(* com.learn.service.*.*(..))")
-    public void log(ProceedingJoinPoint joinPoint) throws Throwable {
-        logger.info("Method will execute");
-        joinPoint.proceed();
-        logger.info("Method executed");
+    public Object log(ProceedingJoinPoint joinPoint) throws Throwable {
+       String methodName = joinPoint.getSignature().getName();
     }
 }
