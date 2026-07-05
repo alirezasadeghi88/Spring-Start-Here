@@ -22,5 +22,7 @@ public class LoggingAspect {
        Object returnedByMethod = joinPoint.proceed();
 
         logger.info("Method executed and returned " + returnedByMethod);
+
+        return returnedByMethod;
     }
 }
