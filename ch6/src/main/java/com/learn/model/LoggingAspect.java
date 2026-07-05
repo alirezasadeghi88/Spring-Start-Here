@@ -14,5 +14,6 @@ public class LoggingAspect {
     public void log(ProceedingJoinPoint joinPoint) throws Throwable {
         logger.info("Method will execute");
         joinPoint.proceed();
+        logger.info("Method executed");
     }
 }
