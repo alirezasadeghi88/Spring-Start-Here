@@ -18,5 +18,9 @@ public class LoggingAspect {
 
        logger.info("Method " + methodName + " with parameters "
                + Arrays.asList(arguments) +  " will execute");
+
+       Object returnedByMethod = joinPoint.proceed();
+
+
     }
 }
