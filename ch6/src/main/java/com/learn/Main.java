@@ -18,5 +18,6 @@ public class Main {
         comment.setAuthor("alireza");
 
         String value = service.publishComment(comment);
+        logger.info(value);
     }
 }
