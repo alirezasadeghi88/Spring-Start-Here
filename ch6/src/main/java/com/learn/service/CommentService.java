@@ -1,5 +1,6 @@
 package com.learn.service;
 
+import com.learn.ToLog;
 import com.learn.model.Comment;
 import org.springframework.stereotype.Service;
 
@@ -11,5 +12,10 @@ public class CommentService {
 
     public void publishComment(Comment comment) {
         logger.info("Publishing comment:" + comment.getText());
+    }
+
+    @ToLog
+    public void deleteComment(Comment comment) {
+        logger.info("Deleting comment:" + comment.getText());
     }
 }
