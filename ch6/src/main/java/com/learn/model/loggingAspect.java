@@ -1,6 +1,8 @@
 package com.learn.model;
 
+import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.AfterReturning;
+import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
 
 import java.util.logging.Logger;
@@ -9,10 +11,15 @@ import java.util.logging.Logger;
 public class loggingAspect {
     private Logger logger = Logger.getLogger(loggingAspect.class.getName());
 
-    @AfterReturning(value = "@annotation(ToLog)",
-            returning = "returnedValue")
+    @Around(value = "@annotation(ToLog)")
+    public Object log(ProceedingJoinPoint joinPoint) throws Throwable {
+        logger.info("Logging Aspect: Calling the intercepted method");
 
-    public void log(Object returnedValue) {
-        logger.info("Method executed and returned " + returnedValue);
+        Object returnedValue = joinPoint.proceed();
+
+        logger.info("Logging Aspect: Method executed and returned " +
+                returnedValue);
+
+        return returnedValue;
     }
 }
