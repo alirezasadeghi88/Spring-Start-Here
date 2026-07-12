@@ -9,8 +9,7 @@ public class CommentService {
     private Logger logger =
             Logger.getLogger(CommentService.class.getName());
 
-    public String publishComment(Comment comment) {
+    public void publishComment(Comment comment) {
         logger.info("Publishing comment:" + comment.getText());
-        return "SUCCESS";
     }
 }
