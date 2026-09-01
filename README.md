@@ -14,8 +14,4 @@ Spring Start Here LEARN WHAT YOU NEED AND LEARN IT WEL
 - [ ]  **Chapter 6**  Using aspects with Spring AOP
 - [ ]  **Chapter 7** Understanding Spring Boot and Spring MVC
 - [ ]  **Chapter 8** Implementing web apps with Spring Boot and Spring MVC
-- [ ]  **Chapter 9** Using the Spring web scopes
-- [ ]  **Chapter 10** Implementing REST services
-- [ ]  **Chapter 11** Consuming REST endpoints
-- [ ]  **Chapter 12** Using data sources in Spring apps
-- [ ]  **Chapter 13** Using transactions in Spring apps
+
