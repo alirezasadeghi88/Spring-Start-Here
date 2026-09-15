@@ -1,4 +1,4 @@
-package com.learn.ch_10.service;
+package com.learn.ch_10.details;
 
 public class PaymentDetails {
     private double amount;
