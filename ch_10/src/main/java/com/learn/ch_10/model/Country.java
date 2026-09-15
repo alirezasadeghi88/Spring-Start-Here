@@ -17,4 +17,8 @@ public class Country {
     public String getName() {
         return name;
     }
+
+    public int getPopulation() {
+        return population;
+    }
 }
