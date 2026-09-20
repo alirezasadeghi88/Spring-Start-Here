@@ -4,6 +4,8 @@ import com.learn.ch12.model.Purchase;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
+import java.util.List;
+
 @Repository
 public class PurchaseRepository {
     private final JdbcTemplate jdbc;
@@ -20,4 +22,8 @@ public class PurchaseRepository {
                 purchase.getProduct(),
                 purchase.getPrice());
     }
-}
+
+    public List<Purchase> findAllPurchases() {
+
+    }
+    }
