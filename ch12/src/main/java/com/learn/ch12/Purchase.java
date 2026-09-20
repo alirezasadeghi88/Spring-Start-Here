@@ -18,4 +18,16 @@ public class Purchase {
     public BigDecimal getPrice() {
         return price;
     }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public void setProduct(String product) {
+        this.product = product;
+    }
+
+    public void setPrice(BigDecimal price) {
+        this.price = price;
+    }
 }
