@@ -2,6 +2,7 @@ package com.learn.ch12.repository;
 
 import com.learn.ch12.model.Purchase;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -24,6 +25,15 @@ public class PurchaseRepository {
     }
 
     public List<Purchase> findAllPurchases() {
+        String sql = "SELECT * FROM purchase";
+        RowMapper<Purchase> purchaseRowMapper = (r, i) -> {
+            Purchase rowObject = new Purchase();
+            rowObject.setId(r.getInt("id"));
+            rowObject.setProduct(r.getString("product"));
+            rowObject.setPrice(r.getBigDecimal("price"));
+            return rowObject;
+        };
 
+        return jdbc.query(sql, purchaseRowMapper);
     }
     }
