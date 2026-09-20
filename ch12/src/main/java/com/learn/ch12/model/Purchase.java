@@ -1,4 +1,4 @@
-package com.learn.ch12;
+package com.learn.ch12.model;
 
 import java.math.BigDecimal;
 
