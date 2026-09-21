@@ -1,10 +1,12 @@
 package com.learn.ch13.repository;
 
+import com.learn.ch13.AccountRowMapper;
 import com.learn.ch13.model.Account;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
 import java.math.BigDecimal;
+import java.util.List;
 
 @Repository
 public class AccountRepository {
@@ -23,5 +25,10 @@ public class AccountRepository {
     public void changeAmount(long id, BigDecimal amount) {
         String sql = "UPDATE account SET amount = ? WHERE id = ?";
         jdbc.update(sql, amount, id);
+    }
+
+    public List<Account> findAllAccounts() {
+        String sql = "SELECT * FROM account";
+        return jdbc.query(sql, new AccountRowMapper());
     }
 }
