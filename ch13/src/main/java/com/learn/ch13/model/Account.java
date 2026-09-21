@@ -18,4 +18,8 @@ public class Account {
     public BigDecimal getAmount() {
         return amount;
     }
+
+    public void setId(long id) {
+        this.id = id;
+    }
 }
