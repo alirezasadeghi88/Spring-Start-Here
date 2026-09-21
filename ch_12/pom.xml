@@ -9,10 +9,10 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.learn</groupId>
-    <artifactId>ch_11</artifactId>
+    <artifactId>ch_12</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>ch_11</name>
-    <description>ch_11</description>
+    <name>ch_12</name>
+    <description>ch_12</description>
     <url/>
     <licenses>
         <license/>
@@ -32,7 +32,7 @@
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
+            <artifactId>spring-boot-starter-webmvc</artifactId>
         </dependency>
 
         <dependency>
