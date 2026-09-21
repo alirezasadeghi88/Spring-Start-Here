@@ -6,6 +6,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.math.BigDecimal;
+import java.util.List;
 
 @Service
 public class TransferService {
@@ -20,16 +21,20 @@ public class TransferService {
                               long idReceiver,
                               BigDecimal amount) {
         Account sender =
-        accountRepository.findAccountById(idSender);
+                accountRepository.findAccountById(idSender);
         Account receiver =
-        accountRepository.findAccountById(idReceiver);
+                accountRepository.findAccountById(idReceiver);
         BigDecimal senderNewAmount =
-        sender.getAmount().subtract(amount);
+                sender.getAmount().subtract(amount);
         BigDecimal receiverNewAmount =
-        receiver.getAmount().add(amount);
+                receiver.getAmount().add(amount);
         accountRepository
-     .changeAmount(idSender, senderNewAmount);
+                .changeAmount(idSender, senderNewAmount);
         accountRepository
-     .changeAmount(idReceiver, receiverNewAmount);
+                .changeAmount(idReceiver, receiverNewAmount);
+    }
+
+    public List<Account> getAllAccounts() {
+        return accountRepository.findAllAccounts();
     }
 }
