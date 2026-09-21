@@ -18,4 +18,16 @@ public class TransferRequest {
     public BigDecimal getAmount() {
         return amount;
     }
+
+    public void setSenderAccountId(long senderAccountId) {
+        this.senderAccountId = senderAccountId;
+    }
+
+    public void setReceiverAccountId(long receiverAccountId) {
+        this.receiverAccountId = receiverAccountId;
+    }
+
+    public void setAmount(BigDecimal amount) {
+        this.amount = amount;
+    }
 }
