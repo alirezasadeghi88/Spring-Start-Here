@@ -6,4 +6,8 @@ public class Account {
     private long id;
     private String name;
     private BigDecimal amount;
+
+    public long getId() {
+        return id;
+    }
 }
