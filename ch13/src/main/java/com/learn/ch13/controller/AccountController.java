@@ -1,6 +1,8 @@
 package com.learn.ch13.controller;
 
 import com.learn.ch13.service.TransferService;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
@@ -9,5 +11,15 @@ public class AccountController {
 
     public AccountController(TransferService transferService) {
         this.transferService = transferService;
+    }
+
+    @PostMapping("/transfer")
+    public void transferMoney(
+            @RequestBody TransferRequest request
+    ) {
+        transferService.transferMoney(
+                request.getSenderAccountId(),
+                request.getReceiverAccountId(),
+                request.getAmount());
     }
 }
