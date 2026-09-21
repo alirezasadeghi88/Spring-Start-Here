@@ -14,4 +14,8 @@ public class Account {
     public String getName() {
         return name;
     }
+
+    public BigDecimal getAmount() {
+        return amount;
+    }
 }
