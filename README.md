@@ -19,4 +19,3 @@ Spring Start Here LEARN WHAT YOU NEED AND LEARN IT WEL
 - [ ]  **Chapter 11**  Consuming REST endpoints
 - [ ]  **Chapter 12**  Using data sources in Spring apps
 - [ ]  **Chapter 13**  Using transactions in Spring apps
-- [ ]  
