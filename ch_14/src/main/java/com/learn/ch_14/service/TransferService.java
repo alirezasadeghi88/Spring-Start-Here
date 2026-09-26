@@ -7,6 +7,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import javax.security.auth.login.AccountNotFoundException;
 import java.math.BigDecimal;
+import java.util.List;
 
 @Service
 public class TransferService {
@@ -42,5 +43,13 @@ public class TransferService {
 
         accountRepository
       .changeAmount(idReceiver, receiverNewAmount);
+    }
+
+    public Iterable<Account> getAllAccounts() {
+        return accountRepository.findAll();
+    }
+
+    public List<Account> findAccountsByName(String name) {
+        return accountRepository.findAccountsByName(name);
     }
 }
