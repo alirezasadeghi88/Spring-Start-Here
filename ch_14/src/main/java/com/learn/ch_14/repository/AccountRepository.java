@@ -1,10 +1,12 @@
 package com.learn.ch_14.repository;
 
 import com.learn.ch_14.model.Account;
+import org.springframework.data.jdbc.repository.query.Query;
 import org.springframework.data.repository.CrudRepository;
 
 import java.util.List;
 
 public interface AccountRepository extends CrudRepository<Account, Long> {
+    @Query("SELECT * FROM account WHERE name = :name")
     List<Account> findAccountsByName(String name);
 }
