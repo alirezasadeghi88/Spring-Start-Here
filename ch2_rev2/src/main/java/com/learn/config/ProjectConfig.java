@@ -18,4 +18,10 @@ public class ProjectConfig {
     String hello() {
         return "Hello";
     }
+
+
+    @Bean
+    Integer ten() {
+        return 10;
+    }
 }
