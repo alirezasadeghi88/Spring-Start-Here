@@ -20,4 +20,11 @@ public class ProjectConfig {
         p.setName("Miki");
         return p;
     }
+
+    @Bean
+    Parrot parrot3() {
+        var p = new Parrot();
+        p.setName("Riki");
+        return p;
+    }
 }
