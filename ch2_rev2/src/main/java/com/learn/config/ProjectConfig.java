@@ -15,13 +15,9 @@ public class ProjectConfig {
     }
 
     @Bean
-    String hello() {
-        return "Hello";
-    }
-
-
-    @Bean
-    Integer ten() {
-        return 10;
+    Parrot parrot2() {
+        var p = new Parrot();
+        p.setName("Miki");
+        return p;
     }
 }
