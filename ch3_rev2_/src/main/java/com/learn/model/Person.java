@@ -1,7 +1,10 @@
 package com.learn.model;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
 public class Person {
-    private String name;
+    private String name = "Ella";
+    @Autowired
     private Parrot parrot;
 
     public String getName() {
