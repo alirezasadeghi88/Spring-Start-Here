@@ -1,7 +1,7 @@
 package com.learn.model;
 
 public class Parrot {
-    private String name;
+    private String name = "Koko";
 
     public String getName() {
         return name;
