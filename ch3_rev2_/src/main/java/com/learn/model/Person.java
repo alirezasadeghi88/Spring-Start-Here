@@ -4,9 +4,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 public class Person {
     private String name = "Ella";
-    @Autowired
     private final Parrot parrot;
 
+    @Autowired
     public Person(Parrot parrot) {
         this.parrot = parrot;
     }
