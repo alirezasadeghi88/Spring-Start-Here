@@ -5,7 +5,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 public class Person {
     private String name = "Ella";
     @Autowired
-    private Parrot parrot;
+    private final Parrot parrot;
+
+    public Person(Parrot parrot) {
+        this.parrot = parrot;
+    }
 
     public String getName() {
         return name;
