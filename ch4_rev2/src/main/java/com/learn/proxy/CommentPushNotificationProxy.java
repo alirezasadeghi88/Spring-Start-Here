@@ -1,4 +1,4 @@
 package com.learn.proxy;
 
-public class CommentPushNotificationProxy {
+public class CommentPushNotificationProxy implements CommentNotificationProxy{
 }
