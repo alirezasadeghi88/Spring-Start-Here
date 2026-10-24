@@ -12,7 +12,7 @@ import org.springframework.context.annotation.EnableAspectJAutoProxy;
 public class ProjectConfig {
 
     @Bean
-    public LoggingAspect aspect() {
+    public LoggingAspect loggingAspect() {
         return new LoggingAspect();
     }
 }
