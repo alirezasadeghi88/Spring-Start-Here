@@ -9,7 +9,9 @@ public class LoggingAspect {
     private Logger logger = Logger.getLogger(LoggingAspect.class.getName());
 
     @Around("execution(* services.*.*(..))")
-    public void log(ProceedingJoinPoint joinPoint) {
+    public void log(ProceedingJoinPoint joinPoint) throws Throwable {
+        logger.info("Method will execute");
         joinPoint.proceed();
+        logger.info("Method executed");
     }
 }
