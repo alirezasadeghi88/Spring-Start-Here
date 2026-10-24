@@ -11,4 +11,9 @@ public class CommentService {
     public void publishComment(Comment comment) {
         logger.info("Publishing comment:" + comment.getText());
     }
+
+    @ToLog
+    public void deleteComment(Comment comment) {
+        logger.info("Deleting comment:" + comment.getText());
+    }
 }
