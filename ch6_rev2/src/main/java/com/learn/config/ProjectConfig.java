@@ -1,6 +1,7 @@
 package com.learn.config;
 
 import com.learn.aspect.LoggingAspect;
+import com.learn.aspect.SecurityAspect;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
@@ -14,5 +15,10 @@ public class ProjectConfig {
     @Bean
     public LoggingAspect loggingAspect() {
         return new LoggingAspect();
+    }
+
+    @Bean
+    public SecurityAspect securityAspect() {
+        return new SecurityAspect();
     }
 }
