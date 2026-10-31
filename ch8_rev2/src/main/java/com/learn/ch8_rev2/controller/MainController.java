@@ -5,9 +5,10 @@ import jdk.internal.classfile.impl.BufferedCodeBuilder;
 public class MainController {
 
     @RequestMapping("/home")
-    public String home(BufferedCodeBuilder.Model page) {
+    public String home(@RequestParam String color,
+                       Model page) {
         page.addAttribute("username", "Katy");
-        page.addAttribute("color", "red");
+        page.addAttribute("color", color);
         return "home.html";
     }
 }
