@@ -11,4 +11,9 @@ public class ProductService {
     public void addProduct(Product p) {
         products.add(p);
     }
+
+
+    public List<Product> findAll() {
+        return products;
+    }
 }
