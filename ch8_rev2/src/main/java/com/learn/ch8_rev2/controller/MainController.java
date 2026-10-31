@@ -4,12 +4,12 @@ import jdk.internal.classfile.impl.BufferedCodeBuilder;
 
 public class MainController {
 
-    @RequestMapping("/home")
+    @RequestMapping("/home/{color}")
     public String home(
-            @RequestParam(required = false) String name,
-            @RequestParam(required = false) String color,
+            @PathVariable String color,
+
             Model page) {
-        page.addAttribute("username", name);
+        page.addAttribute("username", "Katy");
         page.addAttribute("color", color);
         return "home.html";
     }
