@@ -22,5 +22,7 @@ public class ProductsController {
         p.setName(name);
         p.setPrice(price);
         productService.addProduct(p);
+        var products = productService.findAll();
+
     }
 }
