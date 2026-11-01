@@ -13,4 +13,11 @@ public class ProductsController {
 
     @RequestMapping(path = "/products",
             method = RequestMethod.POST)
+    public String addProduct(
+            @RequestParam String name,
+            @RequestParam double price,
+            Model model
+    ) {
+
+    }
 }
