@@ -11,9 +11,6 @@ public class ProductsController {
     }
 
 
-    @RequestMapping("/products")
-    public String viewProducts(Model model) {
-        var products = productService.findAll();
-        model.addAttribute("products", products);
-    }
+    @RequestMapping(path = "/products",
+            method = RequestMethod.POST)
 }
