@@ -19,5 +19,8 @@ public class ProductsController {
             Model model
     ) {
         Product p = new Product();
+        p.setName(name);
+        p.setPrice(price);
+        productService.addProduct(p);
     }
 }
