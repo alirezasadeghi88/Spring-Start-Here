@@ -4,4 +4,9 @@ import com.learn.ch8_rev2.service.ProductService;
 
 public class ProductsController {
     private final ProductService productService;
+
+    public ProductsController(
+            ProductService productService) {
+        
+    }
 }
