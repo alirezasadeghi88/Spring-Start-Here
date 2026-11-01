@@ -24,5 +24,7 @@ public class ProductsController {
         productService.addProduct(p);
         var products = productService.findAll();
         model.addAttribute("products", products);
+
+        return "products.html";
     }
 }
