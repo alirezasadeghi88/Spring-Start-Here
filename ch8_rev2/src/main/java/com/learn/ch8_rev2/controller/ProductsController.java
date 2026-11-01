@@ -18,6 +18,6 @@ public class ProductsController {
             @RequestParam double price,
             Model model
     ) {
-
+        Product p = new Product();
     }
 }
