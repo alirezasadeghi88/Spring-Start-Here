@@ -7,6 +7,6 @@ public class ProductsController {
 
     public ProductsController(
             ProductService productService) {
-        
+        this.productService = productService;
     }
 }
