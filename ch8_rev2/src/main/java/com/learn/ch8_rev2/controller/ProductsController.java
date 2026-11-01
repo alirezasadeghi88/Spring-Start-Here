@@ -13,6 +13,6 @@ public class ProductsController {
 
     @RequestMapping("/products")
     public String viewProducts(Model model) {
-
+        var products = productService.findAll();
     }
 }
