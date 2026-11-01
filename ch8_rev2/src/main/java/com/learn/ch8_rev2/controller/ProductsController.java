@@ -9,4 +9,7 @@ public class ProductsController {
             ProductService productService) {
         this.productService = productService;
     }
+
+
+    @RequestMapping("/products")
 }
