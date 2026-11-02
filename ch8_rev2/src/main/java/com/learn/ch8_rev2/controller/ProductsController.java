@@ -11,20 +11,5 @@ public class ProductsController {
     }
 
 
-    @RequestMapping(path = "/products",
-            method = RequestMethod.POST)
-    public String addProduct(
-            @RequestParam String name,
-            @RequestParam double price,
-            Model model
-    ) {
-        Product p = new Product();
-        p.setName(name);
-        p.setPrice(price);
-        productService.addProduct(p);
-        var products = productService.findAll();
-        model.addAttribute("products", products);
-
-        return "products.html";
-    }
+    @GetMapping("/products")
 }
