@@ -38,8 +38,11 @@ public class ProductsController {
     public String addProduct(
             Product p,
             Model model
-❶
+
     ) {
         productService.addProduct(p);
+        var products = productService.findAll();
+        model.addAttribute("products", products);
+        return "products.html";
     }
 }
