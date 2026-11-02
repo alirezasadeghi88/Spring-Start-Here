@@ -33,4 +33,13 @@ public class ProductsController {
         model.addAttribute("products", products);
         return "products.html";
     }
+
+    "/products")
+    public String addProduct(
+            Product p,
+            Model model
+❶
+    ) {
+
+    }
 }
