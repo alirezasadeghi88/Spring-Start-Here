@@ -12,4 +12,8 @@ public class ProductsController {
 
 
     @GetMapping("/products")
+    public String viewProducts(Model model) {
+
+
+    }
 }
