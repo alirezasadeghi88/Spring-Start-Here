@@ -7,5 +7,9 @@ public class LoginProcessor {
     public boolean login() {
         String username = this.getUsername();
         String password = this.getPassword();
+
+        if ("natalie".equals(username) && "password".equals(password)) {
+            return true;
+        }
     }
 }
