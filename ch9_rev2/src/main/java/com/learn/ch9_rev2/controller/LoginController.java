@@ -14,5 +14,8 @@ public class LoginController {
             Model model
     ) {
         boolean loggedIn = false;
+        if (loggedIn) {
+            model.addAttribute("message", "You are now logged in.");
+        }
     }
 }
