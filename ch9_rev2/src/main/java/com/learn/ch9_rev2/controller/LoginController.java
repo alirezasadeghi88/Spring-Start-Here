@@ -6,4 +6,13 @@ public class LoginController {
     public String loginGet() {
         return "login.html";
     }
+
+    @PostMapping("/")
+    public String loginPost(
+            @RequestParam String username,
+            @RequestParam String password,
+            Model model
+    ) {
+
+    }
 }
