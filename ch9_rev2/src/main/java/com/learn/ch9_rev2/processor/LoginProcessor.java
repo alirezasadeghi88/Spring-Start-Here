@@ -10,6 +10,8 @@ public class LoginProcessor {
 
         if ("natalie".equals(username) && "password".equals(password)) {
             return true;
+        }else {
+            return false;
         }
     }
 }
