@@ -13,6 +13,6 @@ public class LoginController {
             @RequestParam String password,
             Model model
     ) {
-
+        boolean loggedIn = false;
     }
 }
