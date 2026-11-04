@@ -8,4 +8,17 @@ public class LoginProcessor {
             LoggedUserManagementService loggedUserManagementService) {
         this.loggedUserManagementService = loggedUserManagementService;
     }
+
+    public boolean login() {
+        String username = this.getUsername();
+        String password = this.getPassword();
+
+        boolean loginResult = false;
+        if ("natalie".equals(username) && "password".equals(password)) {
+            loginResult = true;
+            loggedUserManagementService.setUsername(username);
+        }
+
+        return loginResult;
+    }
 }
