@@ -11,14 +11,9 @@ public class MainController {
     }
 
     @GetMapping("/main")
-    public String home() {
-        String username =
-                loggedUserManagementService.getUsername();
-
-        if (username == null) {
-            return "redirect:/";
-        }
-
-        return "main.html";
+    public String home(
+            @RequestParam(required = false) String logout,
+            Model model
+    ) {
     }
 }
