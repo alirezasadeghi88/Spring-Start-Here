@@ -25,5 +25,8 @@ public class MainController {
         if (username == null) {
             return "redirect:/";
         }
+
+        model.addAttribute("username" , username);
+        return "main.html";
     }
 }
