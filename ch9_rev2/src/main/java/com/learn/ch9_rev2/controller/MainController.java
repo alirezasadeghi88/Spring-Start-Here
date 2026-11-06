@@ -14,5 +14,9 @@ public class MainController {
     public String home() {
         String username =
                 loggedUserManagementService.getUsername();
+
+        if (username == null) {
+            return "redirect:/";
+        }
     }
 }
