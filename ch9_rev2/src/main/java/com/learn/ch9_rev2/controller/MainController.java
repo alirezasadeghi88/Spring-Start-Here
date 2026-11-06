@@ -12,6 +12,7 @@ public class MainController {
 
     @GetMapping("/main")
     public String home() {
-
+        String username =
+                loggedUserManagementService.getUsername();
     }
 }
