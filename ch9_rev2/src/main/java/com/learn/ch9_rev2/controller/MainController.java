@@ -18,5 +18,7 @@ public class MainController {
         if (username == null) {
             return "redirect:/";
         }
+
+        return "main.html";
     }
 }
