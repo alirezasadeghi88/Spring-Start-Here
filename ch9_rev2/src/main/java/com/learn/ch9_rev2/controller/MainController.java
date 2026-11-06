@@ -21,5 +21,9 @@ public class MainController {
         }
 
         String username = loggedUserManagementService.getUsername();
+
+        if (username == null) {
+            return "redirect:/";
+        }
     }
 }
