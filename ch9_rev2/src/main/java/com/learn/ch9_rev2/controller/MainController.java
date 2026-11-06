@@ -9,4 +9,9 @@ public class MainController {
             LoggedUserManagementService loggedUserManagementService) {
         this.loggedUserManagementService = loggedUserManagementService;
     }
+
+    @GetMapping("/main")
+    public String home() {
+
+    }
 }
