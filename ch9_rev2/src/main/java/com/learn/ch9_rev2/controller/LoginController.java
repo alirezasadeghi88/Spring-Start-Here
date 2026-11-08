@@ -14,10 +14,8 @@ public class LoginController {
             @RequestParam String password,
             Model model
     ) {
-        boolean loggedIn = false;
-        if (loggedIn) {
-            model.addAttribute("message", "You are now logged in.");
-        } else {
-            model.addAttribute("message", "Login failed!");
-        }
+        loginProcessor.setUsername(username);
+        loginProcessor.setPassword(password);
+        boolean loggedIn = loginProcessor.login();
     }
+}
