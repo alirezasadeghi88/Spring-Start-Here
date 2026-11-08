@@ -4,4 +4,8 @@ package com.learn.ch9_rev2.service;
 public class LoginCountService {
 
     private int count;
+
+    public void increment() {
+        count++;
+    }
 }
