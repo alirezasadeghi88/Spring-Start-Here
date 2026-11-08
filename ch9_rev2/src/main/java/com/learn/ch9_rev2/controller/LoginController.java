@@ -21,5 +21,8 @@ public class LoginController {
         if (loggedIn) {
             return "redirect:/main";
         }
+
+        model.addAttribute("message", "Login failed!");
+        return "login.html";
     }
 }
