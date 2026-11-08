@@ -8,4 +8,8 @@ public class LoginCountService {
     public void increment() {
         count++;
     }
+
+    public int getCount() {
+        return count;
+    }
 }
