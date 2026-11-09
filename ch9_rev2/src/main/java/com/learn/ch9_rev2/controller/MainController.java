@@ -15,18 +15,22 @@ public class MainController {
             @RequestParam(required = false) String logout,
             Model model
     ) {
-
         if (logout != null) {
             loggedUserManagementService.setUsername(null);
         }
 
+
         String username = loggedUserManagementService.getUsername();
+        int count = loginCountService.getCount();
+
 
         if (username == null) {
             return "redirect:/";
         }
 
         model.addAttribute("username" , username);
+        model.addAttribute("loginCount", count);
+
         return "main.html";
     }
 }
