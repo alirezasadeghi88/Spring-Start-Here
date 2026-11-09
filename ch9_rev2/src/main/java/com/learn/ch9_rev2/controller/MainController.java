@@ -15,6 +15,8 @@ public class MainController {
             @RequestParam(required = false) String logout,
             Model model
     ) {
-
+        if (logout != null) {
+            loggedUserManagementService.setUsername(null);
+        }
     }
 }
