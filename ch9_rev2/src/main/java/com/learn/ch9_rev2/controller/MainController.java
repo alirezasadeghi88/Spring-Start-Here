@@ -30,5 +30,7 @@ public class MainController {
 
         model.addAttribute("username" , username);
         model.addAttribute("loginCount", count);
+
+        return "main.html";
     }
 }
