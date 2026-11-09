@@ -27,5 +27,8 @@ public class MainController {
         if (username == null) {
             return "redirect:/";
         }
+
+        model.addAttribute("username" , username);
+        model.addAttribute("loginCount", count);
     }
 }
