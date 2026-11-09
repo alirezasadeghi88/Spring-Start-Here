@@ -18,5 +18,11 @@ public class MainController {
         if (logout != null) {
             loggedUserManagementService.setUsername(null);
         }
+
+
+        String username = loggedUserManagementService.getUsername();
+        int count = loginCountService.getCount();
+
+
     }
 }
