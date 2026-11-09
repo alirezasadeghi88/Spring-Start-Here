@@ -16,17 +16,5 @@ public class MainController {
             Model model
     ) {
 
-        if (logout != null) {
-            loggedUserManagementService.setUsername(null);
-        }
-
-        String username = loggedUserManagementService.getUsername();
-
-        if (username == null) {
-            return "redirect:/";
-        }
-
-        model.addAttribute("username" , username);
-        return "main.html";
     }
 }
