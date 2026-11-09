@@ -24,5 +24,8 @@ public class MainController {
         int count = loginCountService.getCount();
 
 
+        if (username == null) {
+            return "redirect:/";
+        }
     }
 }
