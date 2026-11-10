@@ -13,4 +13,12 @@ public class Country {
         country.setPopulation(population);
         return country;
     }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getPopulation() {
+        return population;
+    }
 }
