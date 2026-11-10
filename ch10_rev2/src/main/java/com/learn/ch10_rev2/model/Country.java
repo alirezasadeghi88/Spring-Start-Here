@@ -21,4 +21,12 @@ public class Country {
     public int getPopulation() {
         return population;
     }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setPopulation(int population) {
+        this.population = population;
+    }
 }
