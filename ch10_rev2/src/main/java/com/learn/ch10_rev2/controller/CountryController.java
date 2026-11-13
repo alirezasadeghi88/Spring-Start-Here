@@ -6,9 +6,10 @@ import com.learn.ch10_rev2.model.Country;
 public class CountryController {
 
 
-    @GetMapping("/france")
-    public Country france() {
-        Country c = Country.of("France", 67);
-        return c;
+    @GetMapping("/all")
+    public List<Country> countries() {
+        Country c1 = Country.of("France", 67);
+        Country c2 = Country.of("Spain", 47);
+        return List.of(c1,c2);
     }
 }
