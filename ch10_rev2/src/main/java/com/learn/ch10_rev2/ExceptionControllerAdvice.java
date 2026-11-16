@@ -9,5 +9,8 @@ public class ExceptionControllerAdvice {
     public ResponseEntity<ErrorDetails> exceptionNotEnoughMoneyHandler() {
         ErrorDetails errorDetails = new ErrorDetails();
         errorDetails.setMessage("Not enough money to make the payment.");
+        return ResponseEntity
+                .badRequest()
+                .body(errorDetails);
     }
 }
