@@ -7,6 +7,6 @@ public class ExceptionControllerAdvice {
 
     @ExceptionHandler(NotEnoughMoneyException.class)
     public ResponseEntity<ErrorDetails> exceptionNotEnoughMoneyHandler() {
-
+        ErrorDetails errorDetails = new ErrorDetails();
     }
 }
