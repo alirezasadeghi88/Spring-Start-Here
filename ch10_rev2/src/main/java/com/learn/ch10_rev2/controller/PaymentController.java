@@ -6,15 +6,14 @@ import com.learn.ch10_rev2.service.PaymentService;
 
 public class PaymentController {
 
-    private final PaymentService paymentService;
-
-    public PaymentController(PaymentService paymentService) {
-        this.paymentService = paymentService;
-    }
-
+    private static Logger logger =
+            Logger.getLogger(PaymentController.class.getName());
     @PostMapping("/payment")
-    public ResponseEntity<PaymentDetails> makePayment() {
-        PaymentDetails paymentDetails = paymentService.processPayment();
+    public ResponseEntity<PaymentDetails> makePayment(
+            @RequestBody PaymentDetails paymentDetails) {
+        logger.info("Received payment " +
+                paymentDetails.getAmount());
+
         return ResponseEntity
                 .status(HttpStatus.ACCEPTED)
                 .body(paymentDetails);
