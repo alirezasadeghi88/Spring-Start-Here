@@ -1,4 +1,4 @@
-package com.learn.ch11_rev2;
+package com.learn.ch11_rev2.model;
 
 public class Payment {
     private String id;
