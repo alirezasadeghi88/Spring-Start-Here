@@ -1,22 +1,18 @@
 package com.learn.ch11_rev2.controller;
 @RestController
 public class PaymentsController {
-    private static Logger logger =
-            Logger.getLogger(PaymentsController.class.getName());
+    private final PaymentsProxy paymentsProxy;
+
+
+    public PaymentsController(PaymentsProxy paymentsProxy) {
+        this.paymentsProxy = paymentsProxy;
+    }
 
     @PostMapping("/payment")
-    public ResponseEntity<Payment> createPayment(
-            @RequestHeader String requestId,
+    public Payment createPayment(
             @RequestBody Payment payment
     ) {
-        logger.info("Received request with ID " + requestId +
-                " ;Payment Amount: " + payment.getAmount());
-
-        payment.setId(UUID.randomUUID().toString());
-
-        return ResponseEntity
-        .status(HttpStatus.OK)
-                .header("requestId", requestId)
-                .body(payment);
+        String requestId = UUID.randomUUID().toString();
+        return paymentsProxy.createPayment(requestId, payment);
     }
 }
