@@ -6,4 +6,8 @@ public class PaymentsProxys {
 
     @Value("${name.service.url}")
     private String paymentsServiceUrl;
+
+    public PaymentsProxy(RestTemplate rest) {
+        this.rest = rest;
+    }
 }
