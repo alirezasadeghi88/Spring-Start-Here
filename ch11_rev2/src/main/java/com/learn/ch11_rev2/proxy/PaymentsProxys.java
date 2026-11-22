@@ -2,27 +2,23 @@ package com.learn.ch11_rev2.proxy;
 @Component
 public class PaymentsProxys {
 
-    private final RestTemplate rest;
+    private final WebClient webClient;
 
     @Value("${name.service.url}")
-    private String paymentsServiceUrl;
+    private String url;
 
-    public PaymentsProxy(RestTemplate rest) {
-        this.rest = rest;
+    public PaymentsProxy(WebClient webClient) {
+        this.webClient = webClient;
     }
 
-    public Payment createPayment(Payment payment) {
-        String uri = paymentsServiceUrl + "/payment";
-        HttpHeaders headers = new HttpHeaders();
-        headers.add("requestId",
-                UUID.randomUUID().toString());
-        HttpEntity<Payment> httpEntity =
-        new HttpEntity<>(payment, headers)
-        ResponseEntity<Payment> response =
-        rest.exchange(uri,
-                HttpMethod.POST,
-                httpEntity,
-                Payment.class);
-        return response.getBody();
+    public Mono<Payment> createPayment(
+            String requestId,
+            Payment payment) {
+        return webClient.post()
+              .uri(url + "/payment")
+              .header("requestId", requestId)
+              .body(Mono.just(payment), Payment.class)
+              .retrieve()
+              .bodyToMono(Payment.class);
     }
 }
