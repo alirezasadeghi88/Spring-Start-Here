@@ -6,4 +6,8 @@ public class PaymentsProxys {
 
     @Value("${name.service.url}")
     private String url;
+
+    public PaymentsProxy(WebClient webClient) {
+        this.webClient = webClient;
+    }
 }
