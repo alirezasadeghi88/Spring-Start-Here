@@ -8,4 +8,13 @@ public class PurchaseRepository {
     public PurchaseRepository(JdbcTemplate jdbc) {
         this.jdbc = jdbc;
     }
+
+    public void storePurchase(Purchase purchase) {
+        String sql =
+        "INSERT INTO purchase VALUES (NULL, ?, ?)";
+
+        jdbc.update(sql,
+                purchase.getProduct(),
+                purchase.getPrice());
+    }
 }
