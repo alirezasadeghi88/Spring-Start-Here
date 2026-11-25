@@ -19,6 +19,16 @@ public class PurchaseRepository {
     }
 
     public List<Purchase> findAllPurchases() {
+        String sql = "SELECT * FROM purchase";
 
+        RowMapper<Purchase> purchaseRowMapper = (r, i) -> {
+            Purchase rowObject = new Purchase();
+            rowObject.setId(r.getInt("id"));
+            rowObject.setProduct(r.getString("product"));
+            rowObject.setPrice(r.getBigDecimal("price"));
+            return rowObject;
+        };
+
+        return jdbc.query(sql, purchaseRowMapper);
     }
 }
