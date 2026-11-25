@@ -17,4 +17,8 @@ public class PurchaseRepository {
                 purchase.getProduct(),
                 purchase.getPrice());
     }
+
+    public List<Purchase> findAllPurchases() {
+
+    }
 }
