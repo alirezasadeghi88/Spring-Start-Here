@@ -16,4 +16,9 @@ public class PurchaseController {
     public void storePurchase(@RequestBody Purchase purchase) {
         purchaseRepository.storePurchase(purchase);
     }
+
+    @GetMapping
+    public List<Purchase> findPurchases() {
+        return purchaseRepository.findAllPurchases();
+    }
 }
