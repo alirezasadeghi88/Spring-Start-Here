@@ -5,9 +5,7 @@ public class PurchaseRepository {
 
     private final JdbcTemplate jdbc;
 
-    public PurchaseRepository(
-            JdbcTemplate jdbc) {
-
+    public PurchaseRepository(JdbcTemplate jdbc) {
         this.jdbc = jdbc;
     }
 }
