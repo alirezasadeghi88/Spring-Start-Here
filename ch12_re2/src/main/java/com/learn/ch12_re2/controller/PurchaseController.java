@@ -11,4 +11,9 @@ public class PurchaseController {
             PurchaseRepository purchaseRepository) {
         this.purchaseRepository = purchaseRepository;
     }
+
+    @PostMapping
+    public void storePurchase(@RequestBody Purchase purchase) {
+        purchaseRepository.storePurchase(purchase);
+    }
 }
