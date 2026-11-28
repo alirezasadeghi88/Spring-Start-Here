@@ -7,4 +7,7 @@ public class ProjectConfig {
 
     @Value("${custom.datasource.username}")
     private String datasourceUsername;
+
+    @Value("${custom.datasource.password}")
+    private String datasourcePassword;
 }
