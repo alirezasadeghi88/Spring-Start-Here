@@ -10,4 +10,16 @@ public class ProjectConfig {
 
     @Value("${custom.datasource.password}")
     private String datasourcePassword;
+
+    @Bean
+    public DataSource dataSource() {
+        HikariDataSource dataSource =
+        new HikariDataSource();
+
+        dataSource.setJdbcUrl(datasourceUrl);
+        dataSource.setUsername(datasourceUsername);
+        dataSource.setPassword(datasourcePassword);
+        dataSource.setConnectionTimeout(1000);
+        return dataSource;
+    }
 }
